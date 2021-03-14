@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContainer {
+    width: 100%;
+    flex: auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');

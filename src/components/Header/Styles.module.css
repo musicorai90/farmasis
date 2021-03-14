@@ -1,0 +1,36 @@
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    background: #2ca86e;
+    align-items: stretch;
+    height: 54px;
+}
+
+.headerTitle {
+    color: #fff;
+    margin: 0;
+    padding: .5rem 1rem;
+}
+
+.headerNav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    align-items: stretch;
+}
+
+.headerNav > li > a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 1rem;
+    transition: all .5s ease-in-out;
+    height: 54px;
+    line-height: 54px;
+}
+
+.headerNav > li > a:hover {
+    background: #1b975d;
+}
