@@ -5,20 +5,7 @@ import ReactDOM from 'react-dom'
 import Modal from 'react-modal'
 import { useHistory, useRouteMatch } from 'react-router-dom'
 
-import { toast } from 'react-toastify';
- 
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)',
-    width                 : '25%',
-    border                : 'none'
-  }
-};
+import { toast } from 'react-toastify'
  
 Modal.setAppElement('#root')
 Modal.defaultStyles.overlay.backgroundColor = 'rgba(0,0,0,.3)';
@@ -29,30 +16,29 @@ function Product(props) {
     const match = useRouteMatch()
     
     var subtitle
-    const [modalIsOpen,setIsOpen] = useState(false);
+    const [modalIsOpen,setIsOpen] = useState(false)
 
     function openModal() {
-        setIsOpen(true);
+        setIsOpen(true)
     }
 
     function afterOpenModal() {
-        subtitle.style.color = '#000';
+        subtitle.style.color = '#000'
     }
 
     function closeModal(){
-        setIsOpen(false);
+        setIsOpen(false)
     }
 
     function toList(){
         closeModal()
-	let result           = '';
-        const characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        const charactersLength = characters.length;
+	let result           = ''
+        const characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+        const charactersLength = characters.length
         for ( var i = 0; i < 10; i++ ) {
-            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            result += characters.charAt(Math.floor(Math.random() * charactersLength))
         }
-        //toast(`Reservado con exito (Código: ${result})`,{className: clases.toast});
-        toast(<div>Reservado con exito<br/><br/>(Código: {result})</div>,{className: clases.toast});
+        toast(<div>Reservado con exito<br/><br/>(Código: {result})</div>,{className: clases.toast})
     }
 
     return (
@@ -66,7 +52,7 @@ function Product(props) {
               isOpen={modalIsOpen}
               onAfterOpen={afterOpenModal}
               onRequestClose={closeModal}
-              style={customStyles}
+              className={clases.modal}
               contentLabel="Example Modal"
             >
                 <button className={clases.modalClose} onClick={closeModal}>X</button>

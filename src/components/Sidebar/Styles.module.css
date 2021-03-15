@@ -30,3 +30,31 @@
     margin-right: .5rem;
     font-size: 20px;
 }
+
+.sideBar > li > a > span {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .sideBarContainer {
+        width: 40%;
+    }
+
+    .sideBar {
+    	padding: .5rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .sideBarContainer {
+        width: auto;
+    }
+
+    .sideBar > li > a > svg {
+        margin-right: 0;
+    }
+
+    .sideBar > li > a > span {
+        display: none;
+    }
+}

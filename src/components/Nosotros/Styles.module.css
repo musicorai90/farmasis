@@ -13,6 +13,22 @@
 .box {
     padding: 1rem;
     width: 50%;
-    background: #fff;
+    background: rgba(255,255,255,.8);
     border-radius: 5px;
+}
+
+@media screen and (max-width: 425px) {
+	.container {
+		justify-content: center;
+	}	
+	
+	.box {
+		width: 75%;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.box {
+		width: 90%;
+	}
 }

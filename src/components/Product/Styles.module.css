@@ -44,6 +44,23 @@
     opacity: .8;
 }
 
+.modal {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    border: none;
+    background: #fff;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
 .modalClose {
     position: absolute;
     top: 1rem;
@@ -98,4 +115,30 @@
     background: #2ca86e;
     color: #fff;
     font-family: 'Akaya Telivigala', cursive;
+}
+
+@media screen and (max-width: 768px) {
+    .product {
+        width: 45%;
+    }
+    
+    .modal {
+		width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .product {
+        width: 90%;
+    }
+
+    .modal {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .modal {
+        width: 90%;
+    }
 }

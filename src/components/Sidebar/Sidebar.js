@@ -24,13 +24,13 @@ const Sidebar = () => {
           <nav>
             <ul className={clases.sideBar}>
               <li>
-                <a href="#" onClick={toBelleza}><FaEye /> Belleza</a>
+                <a href="#" onClick={toBelleza}><FaEye /><span>Belleza</span></a>
               </li>
               <li>
-                <a href="#" onClick={toLimpieza}><FaBroom /> Limpieza</a>
+                <a href="#" onClick={toLimpieza}><FaBroom /><span>Limpieza</span></a>
               </li>
               <li>
-                <a href="#" onClick={toMedicamentos}><FaPlus /> Medicamentos</a>
+                <a href="#" onClick={toMedicamentos}><FaPlus /><span>Medicamentos</span></a>
               </li>
             </ul>
           </nav>
